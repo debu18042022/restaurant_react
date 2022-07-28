@@ -22,8 +22,8 @@ export default function Restaurant() {
                <div className='navbar_logo_container' style={{dislay:"inline-block"}}><img className="apni_rasoi" src="apni_rasoi2.jpeg" alt=""></img></div>
                <div className='navbar_item_container'>
                     <div><button>Home</button></div>
-                    <div><button>Register</button></div>
-                    <div><button>Login</button></div>
+                    <div><button>About Us</button></div>
+                    {/* <div><button></button></div> */}
                </div>
         </nav>
 

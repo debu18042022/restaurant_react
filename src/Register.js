@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import {users_data} from './GlobalUser.js';
 
 export default function Register() {
@@ -9,6 +10,7 @@ export default function Register() {
     const [Phone_No,setPhone] = useState('');
     const [Password,setPassword] = useState('');
     const [Confirm_Password,setConfirmPassword] = useState('');
+    let navigate = useNavigate();
    
 
     const Get_Name = (event) => {
@@ -32,10 +34,19 @@ export default function Register() {
     }
     
     const Sign_Up = () => {
-        const temp_user = {name:Name,email:Email,p_no:Phone_No,pass:Password,c_pass:Confirm_Password};
-        users_data.push(temp_user);
-        console.log(users_data);
-        // users_data.splice(0, users_data.length);
+     
+      if(Name && Email && Phone_No && Password && Confirm_Password){
+        if(Password === Confirm_Password){
+          const temp_user = {name:Name,email:Email,p_no:Phone_No,pass:Password,c_pass:Confirm_Password};
+          users_data.push(temp_user);
+          console.log(users_data);
+          // users_data.splice(0, users_data.length);
+          navigate('/login');
+        }
+        else{
+          alert("password not match");
+        }
+      }
     }
 
     return (
@@ -66,7 +77,8 @@ export default function Register() {
            </table>
             </div>
          
-           <NavLink to="/login" state={{Name,Email,Phone_No,Password,Confirm_Password}} onClick={Sign_Up}>Register</NavLink>
+           {/* <NavLink to="/login" state={{Name,Email,Phone_No,Password,Confirm_Password}} onClick={Sign_Up}>Register</NavLink> */}
+           <button onClick={Sign_Up}>Register</button>
           </div>
         </div>
       )

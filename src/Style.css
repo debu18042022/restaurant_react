@@ -214,6 +214,10 @@ nav{
    height: 20vh;
 }
 
+.menuItem img:hover{
+    width: 40vw;
+    height: 70vh;
+}
 .single_page_reviews{
     /* border: 1px solid black; */
     margin-top: 10px;
@@ -221,6 +225,7 @@ nav{
     background-color:rgb(254, 241, 241);
     padding: 10px;
     border-radius: 0.5%;
+    margin-bottom: 10px;
 }
 
 .single_page_reviews span,div{
@@ -233,6 +238,83 @@ nav{
 
 .hours{
     display:none;
-   
     position: absolute;
+}
+
+.book_table_container{
+    display: none;
+    position: absolute;
+}
+
+.book_table_field{
+/* border: 1px solid black; */
+width: 50vw;
+height: 5vh;
+display: flex;
+justify-content:space-between;
+align-items: center;
+}
+
+.book_table_field input{
+    outline: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 10vw;
+}
+
+/* TableBooked page */
+
+.main_table_receipt_container{
+    /* border: 1px solid black; */
+    display: grid;
+    place-items: center;
+    background-color:rgb(246, 231, 231);
+    height: 100vh;
+}
+
+.table_receipt_container{
+    /* border: 1px solid black; */
+    width: 40%;
+    background-color:rgb(246, 231, 231);
+    box-shadow: 20px 20px 30px black;
+}
+
+.table_receipt_container h4,h5{
+    display: inline-block;
+    font-size: 1vw;
+    font-weight:400;
+}
+
+.table_receipt_container h4{
+    font-size:1.5vw;
+    font-weight: bold;
+}
+
+
+.text_container{
+    background-color:rgb(246, 231, 231);
+}
+
+.receipt_table .tr,.td{
+    border: none;
+    border-bottom:1px solid black;
+    width: 100vw;
+    height:10vh;
+  
+}
+table{
+    padding: 2vw;
+}
+
+.adjuct_container{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.thank_you{
+    background-image: url("https://i.ytimg.com/vi/Le5DMs_BrNA/maxresdefault.jpg");
+    background-size: cover;
+    /* height: ; */
+    width: 100%;
 }

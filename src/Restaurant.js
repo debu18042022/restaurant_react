@@ -55,7 +55,8 @@ export default function Restaurant() {
                 restaurant.map((item) => (
                     <>  
                         <div className='flex_item'>
-                            <img src={item.photograph} alt="" />
+                        <NavLink to="/SinglePage" state={{rest_name:item.name}} onClick= {() => set_click_restaurant(item.name)}>  <img src={item.photograph} alt="" /></NavLink>
+                          
                             <div className='details'>
                                 <h4>{item.name}</h4>
                                 <p>{item.address}</p>
